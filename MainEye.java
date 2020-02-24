@@ -31,6 +31,8 @@ public class MainEye {
             }
             if (numSinceLastSpecial >= 420) {
                 mSummon_Chance = SUMMON_CHANCE / 2;
+            } else {
+                mSummon_Chance = SUMMON_CHANCE;
             }
         }
         return summoningEyes;
