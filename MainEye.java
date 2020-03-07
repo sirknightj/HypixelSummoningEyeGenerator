@@ -29,7 +29,7 @@ public class MainEye {
                 summoningEyes++;
                 numSinceLastSpecial = 0;
             }
-            if (numSinceLastSpecial >= 420) {
+            if (numSinceLastSpecial >= SUMMON_CHANCE) {
                 mSummon_Chance = SUMMON_CHANCE / 2;
             } else {
                 mSummon_Chance = SUMMON_CHANCE;
