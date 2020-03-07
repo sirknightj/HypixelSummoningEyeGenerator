@@ -8,3 +8,5 @@ The output file will contain the player number and the number of eyes they got i
 Each player will be outputted on their own line, for easy copy/pasting into Excel or Google Sheets.
 
 Assumes the chance of an eye drop is 1/420, and that the rate becomes 1/210 after 420 zealots are killed and no eye is dropped. Chance resets to 1/420 after an eye is dropped.
+
+More information here: http://www.sirknightj.com/blog/2020/02/23/summing-eye-drop-rates-hypixel-skyblock/
