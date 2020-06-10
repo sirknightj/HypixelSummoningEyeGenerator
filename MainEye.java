@@ -1,9 +1,11 @@
 import java.io.*;
+
 import static java.lang.Math.*;
 
 public class MainEye {
     public static final String FILE_OUTPUT_NAME = "output.txt";
     public static final double SUMMON_CHANCE = 420;
+    public static final int DOUBLE_AFTER_THIS_MANY = 420;
     public static final int NUMBER_OF_PLAYERS = 10000;
     public static final int ZEALOTS_PER_PLAYER = 1000;
 
@@ -13,7 +15,7 @@ public class MainEye {
         for (int i = 1; i <= NUMBER_OF_PLAYERS; i++) {
             writer.print(i + "\t" + summon(ZEALOTS_PER_PLAYER));
             writer.println();
-            if(i % (NUMBER_OF_PLAYERS / 10) == 0) {
+            if (i % Math.max((NUMBER_OF_PLAYERS / 10), 1) == 0) {
                 System.out.println("Finished player " + i);
             }
         }
@@ -25,15 +27,16 @@ public class MainEye {
         int numSinceLastSpecial = 0;
         double mSummon_Chance = SUMMON_CHANCE;
         for (int i = 0; i < zealotsEach; i++) {
-            if (Math.ceil(random() * mSummon_Chance) == 1) {
+            if (Math.ceil(random() * mSummon_Chance) == 5) { // this means we got a summoning eye
                 summoningEyes++;
                 numSinceLastSpecial = 0;
             }
-            if (numSinceLastSpecial >= SUMMON_CHANCE) {
+            if (numSinceLastSpecial >= DOUBLE_AFTER_THIS_MANY) {
                 mSummon_Chance = SUMMON_CHANCE / 2;
             } else {
                 mSummon_Chance = SUMMON_CHANCE;
             }
+            numSinceLastSpecial++;
         }
         return summoningEyes;
     }
