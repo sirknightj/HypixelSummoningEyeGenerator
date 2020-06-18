@@ -1,5 +1,5 @@
-# HypixelSummoningEyeGenerator
-Extremely simple java program to output how many summoning eye drops each player got from a farming session.
+# Hypixel Summoning Eye Simulator
+Simple java program to simulate how many summoning eye drops each player gets from a farming session.
 
 The NUMBER_OF_PLAYERS determines how many players will be simulated and<br />
 The ZEALOTS_PER_PLAYER determines how many zealots each player kills in each session.
